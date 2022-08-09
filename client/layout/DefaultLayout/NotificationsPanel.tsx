@@ -40,7 +40,7 @@ export const NotificationsPanel: React.FC<NotificationsPanelProps> = ({}) => {
         }}
       >
         Notifications
-        <Badge ml={1} colorScheme="red">
+        <Badge ml={1} colorScheme="purple">
           {unreadCount}
         </Badge>
       </Button>
@@ -84,7 +84,7 @@ export const NotificationsPanel: React.FC<NotificationsPanelProps> = ({}) => {
                 <Box>
                   <Button
                     onClick={() => markOneMessageAsRead(msg.id)}
-                    colorScheme="red"
+                    colorScheme="purple"
                     size="xs"
                   >
                     Delete
@@ -96,7 +96,7 @@ export const NotificationsPanel: React.FC<NotificationsPanelProps> = ({}) => {
 
           <DrawerFooter>
             <HStack>
-              <Button colorScheme="red" onClick={() => markAllAsRead()}>
+              <Button colorScheme="purple" onClick={() => markAllAsRead()}>
                 Mark All As Read
               </Button>
             </HStack>

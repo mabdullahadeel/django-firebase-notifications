@@ -16,7 +16,7 @@ export const ThemeToggler = ({ showLabel = false, ...rest }) => {
         isChecked={colorMode === "dark"}
         isDisabled={false}
         value={colorMode}
-        colorScheme="red"
+        colorScheme="purple"
         mr={2}
         onChange={toggleColorMode}
         {...rest}

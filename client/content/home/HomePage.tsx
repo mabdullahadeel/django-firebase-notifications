@@ -31,6 +31,7 @@ export const HomePageContent: React.FC<HomePageProps> = ({}) => {
           onClick={() => sendTestNotification.mutate()}
           isLoading={sendTestNotification.isLoading}
           loadingText="Sending..."
+          colorScheme="purple"
         >
           Send Test Notification
         </Button>

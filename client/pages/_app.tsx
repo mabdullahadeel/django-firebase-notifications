@@ -35,7 +35,7 @@ function MyApp(props: MyAppProps) {
         <meta name="twitter:site" content="@django_firebase" />
         <meta
           property="twitter:image"
-          content="https://django-firebase.vercel.app/django-firebase.jpg"
+          content="https://django-firebase.vercel.app/app-image.jpg"
         />
         <meta property="og:title" content="django-firebase.vercel.app" />
         <meta property="og:url" content="https://django-firebase.vercel.app/" />
@@ -50,11 +50,11 @@ function MyApp(props: MyAppProps) {
         />
         <meta
           property="og:image"
-          content="https://django-firebase.vercel.app/django-firebase.jpg"
+          content="https://django-firebase.vercel.app/app-image.jpg"
         />
         <meta
           property="og:image:url"
-          content="https://django-firebase.vercel.app/django-firebase.jpg"
+          content="https://django-firebase.vercel.app/app-image.jpg"
         />
         <meta
           name="viewport"

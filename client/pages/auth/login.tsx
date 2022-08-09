@@ -99,7 +99,7 @@ const Login: NextPageWithLayout = () => {
             isLoading={isSubmitting}
             loadingText="Logging in..."
             width="100%"
-            colorScheme="red"
+            colorScheme="purple"
             variant="outline"
             mt={6}
             mb={6}
