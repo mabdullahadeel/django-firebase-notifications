@@ -1,6 +1,7 @@
 import random
 from django.http import HttpRequest
 from rest_framework.views import APIView
+from rest_framework.throttling import UserRateThrottle
 from rest_framework import generics
 from rest_framework.authtoken.models import Token
 from rest_framework.permissions import AllowAny
@@ -41,8 +42,17 @@ class UserMeView(APIView):
         return Response(data=data, status=200)
 
 
+class NotificationBurstThrottle(UserRateThrottle):
+    scope = 'test-notifications'
+    rate = '10/minute'
+
+class NotificationSustainedThrottle(UserRateThrottle):
+    scope = 'test-notifications'
+    rate = '200/day'
+
 class TestNotificationView(APIView):
     permission_classes = (AllowAny,)
+    throttle_classes = (NotificationBurstThrottle, NotificationSustainedThrottle)
 
     def post(self, request: HttpRequest) -> Response:
         FirebaseService.send_notification_to_user(user=request.user, message=random.choice(random_jokes))

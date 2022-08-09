@@ -14,10 +14,13 @@ export const HomePageContent: React.FC<HomePageProps> = ({}) => {
         title: "Notification Sent",
       });
     },
-    onError: (error) => {
+    onError: (error: any) => {
+      const throttled = error?.response?.status === 429;
       toast({
         status: "error",
-        title: "Error Sending Notification",
+        title: throttled
+          ? "Calm Down, Too Many Notifications can cause bad things"
+          : "Error Sending Notification",
       });
     },
   });

@@ -51,7 +51,13 @@ export const NotificationsPanel: React.FC<NotificationsPanelProps> = ({}) => {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent
+          minWidth={{
+            base: "auto",
+            md: "400px",
+            lg: "40rem",
+          }}
+        >
           <DrawerCloseButton />
           <DrawerHeader>Latest Notifications</DrawerHeader>
 
