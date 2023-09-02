@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "djnotifications/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "djnotifications/wsgi.py"
+    }
+  ]
+}
