@@ -82,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'djnotification.wsgi.application'
+WSGI_APPLICATION = 'djnotification.wsgi.app'
 
 
 # Database
